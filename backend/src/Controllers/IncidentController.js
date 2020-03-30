@@ -4,12 +4,28 @@ module.exports = {
   //index para listar todos os incidents
   async index(req, res) {
     try {
+      //recebendo o numero de pagina
       const { page = 1 } = req.query;
+
+      //contando o numero de paginas
+      const [count] = await connection("incidents").count();
+
+      //retornando ao front o numero de registros
+      res.header("X-Total-Count", count["count(*)"]);
+
       //buscando no banco todos os incidents
       const incidents = await connection("incidents")
+        .join("ongs", "ongs.id", "=", "incidents.ong_id")
         .limit(5)
         .offset((page - 1) * 5)
-        .select("*");
+        .select([
+          "incidents.*", //todos os dados dos incidentes
+          "ongs.name", //nome da ong
+          "ongs.email", //email da ong
+          "ongs.whatsapp", //whatsapp da ong
+          "ongs.city", //cidade da ong
+          "ongs.uf" // uf da ong
+        ]);
 
       //retornando ao front
       return res.json(incidents);

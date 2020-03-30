@@ -28,12 +28,12 @@ Repositório do software desenvolvido na semana OmniStack
 
 |           Funcionalidade            | Status de Desenvolvimento |
 | :---------------------------------: | :-----------------------: |
-|            Login de ONG             |         Pendente          |
-|            Logout de ONG            |         Pendente          |
-|           Cadastro de ONG           |         Pendente          |
-| Listar casos especificos de uma ONG |         Pendente          |
-|        Cadastrar novos Casos        |         Pendente          |
-|            Deletar casos            |         Pendente          |
-|        Listar todos os casos        |         Pendente          |
-|   Entrar em contato via whatsApp    |         Pendente          |
-|     Entrar em contato via email     |         Pendente          |
+|            Login de ONG             |         Concluido         |
+|            Logout de ONG            |         Concluido         |
+|           Cadastro de ONG           |         Concluido         |
+| Listar casos especificos de uma ONG |         Concluido         |
+|        Cadastrar novos Casos        |         Concluido         |
+|            Deletar casos            |         Concluido         |
+|        Listar todos os casos        |         Concluido         |
+|   Entrar em contato via whatsApp    |         Concluido         |
+|     Entrar em contato via email     |         Concluido         |
