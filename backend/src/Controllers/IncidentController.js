@@ -19,11 +19,11 @@ module.exports = {
         .limit(5)
         .offset((page - 1) * 5)
         .select([
-          "incidents.*", //todos os dados dos incidentes
-          "ongs.name", //nome da ong
-          "ongs.email", //email da ong
-          "ongs.whatsapp", //whatsapp da ong
-          "ongs.city", //cidade da ong
+          "incidents.*", // todos os dados dos incidentes
+          "ongs.name", // nome da ong
+          "ongs.email", // email da ong
+          "ongs.whatsapp", // whatsapp da ong
+          "ongs.city", // cidade da ong
           "ongs.uf" // uf da ong
         ]);
 
@@ -70,7 +70,7 @@ module.exports = {
       await connection("incidents")
         .where("id", id)
         .delete();
-      console.log("deu certo");
+
       return res.status(204).send();
     } catch (error) {
       return res.json(error);
