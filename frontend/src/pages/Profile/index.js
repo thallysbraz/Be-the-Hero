@@ -35,7 +35,7 @@ export default function Profile() {
   function handleLogout() {
     localStorage.clear();
 
-    history.push("/");
+    history.push("/"); //redirecionando
   }
 
   return (
@@ -53,6 +53,7 @@ export default function Profile() {
       </header>
 
       <h1>Casos Cadastrados</h1>
+
       <ul>
         {incidents.map(incident => (
           <li key={incident.id}>
